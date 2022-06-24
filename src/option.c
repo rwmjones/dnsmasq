@@ -5308,6 +5308,7 @@ void read_opts(int argc, char **argv, char *compile_opts)
       
       if (option == -1)
 	{
+#if 0
 	  for (; optind < argc; optind++)
 	    {
 	      unsigned char *c = (unsigned char *)argv[optind];
@@ -5315,6 +5316,7 @@ void read_opts(int argc, char **argv, char *compile_opts)
 		if (!isspace(*c))
 		  die(_("junk found in command line"), NULL, EC_BADCONF);
 	    }
+#endif
 	  break;
 	}
 
